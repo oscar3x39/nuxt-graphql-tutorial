@@ -1,4 +1,8 @@
-# install
+# Source
+- [Apollo Docs](https://www.apollographql.com/docs)
+- [Building GraphQL APIs with Vue.js and Apollo Client](https://stackabuse.com/building-graphql-apis-with-vue-js-and-apollo-client/)
+
+# installation
 ```
 npx create-nuxt-app nuxt-graphql
 
@@ -27,10 +31,6 @@ apollo: {
     }
 }
 ```
-
-# Referrer
-- [Apollo Docs](https://www.apollographql.com/docs)
-- [Building GraphQL APIs with Vue.js and Apollo Client](https://stackabuse.com/building-graphql-apis-with-vue-js-and-apollo-client/)
 
 ## Creating Queries
 > graphql/queries/userQueries
