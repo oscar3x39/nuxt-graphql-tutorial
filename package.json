@@ -11,7 +11,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/apollo": "^4.0.0-rc19",
+    "@nuxtjs/apollo": "^5.0.0-alpha.8",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/vuetify": "^1.9.1",
     "cross-env": "^5.2.0",
@@ -26,6 +26,6 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^6.1.0",
     "eslint-plugin-nuxt": ">=0.4.2",
-    "nodemon": "^1.18.9"
+    "nodemon": "^3.0.1"
   }
 }
