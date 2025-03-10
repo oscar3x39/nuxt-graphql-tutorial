@@ -15,9 +15,9 @@
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/vuetify": "^1.9.1",
     "cross-env": "^5.2.0",
-    "express": "^4.21.0",
+    "express": "^4.21.2",
     "graphql-tag": "^2.10.1",
-    "nuxt": "^3.12.4"
+    "nuxt": "^3.16.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
