@@ -1,4 +1,111 @@
-# Source
+# Nuxt GraphQL Tutorial
+
+A tutorial project demonstrating how to use GraphQL with Nuxt.js, including a complete Docker setup for development.
+## Screenshots
+
+### Nuxt Frontend Application
+
+![Nuxt Frontend Application](screenshots/nuxt-frontend.jpg)
+
+*Nuxt.js frontend application displaying user data retrieved from GraphQL server*
+
+### GraphQL Playground
+
+![GraphQL Playground](screenshots/graphql-playground.jpg)
+
+*GraphQL Playground interface for testing and developing GraphQL queries*
+
+## Features
+
+- Modern frontend application built with Nuxt.js
+- Integrated GraphQL using Apollo Client
+- Simple GraphQL server implementation
+- Complete Docker containerized development environment
+- Container network communication
+
+## Technical Stack
+
+- **Frontend**: Nuxt.js 2.x, Vue.js, Vuetify
+- **GraphQL Client**: Apollo Client
+- **GraphQL Server**: Apollo Server Express
+- **Containerization**: Docker, Docker Compose
+
+## Quick Start with Docker
+
+```bash
+# Clone the repository
+git clone https://github.com/oscar3x39/nuxt-graphql-tutorial.git
+cd nuxt-graphql-tutorial
+
+# Start the application with Docker Compose
+docker-compose up
+```
+
+After running these commands, you can access:
+- Nuxt application: http://localhost:3000
+- GraphQL server: http://localhost:5000/graphql
+
+## GraphQL Test Queries
+
+In GraphQL Playground (http://localhost:5000/graphql), you can use the following queries to test the API:
+
+### Query Hello Message
+```graphql
+query {
+  hello
+}
+```
+
+### Query All Users
+```graphql
+query {
+  users {
+    id
+    name
+    email
+  }
+}
+```
+
+### Query Hello Message and All Users
+```graphql
+query {
+  hello
+  users {
+    id
+    name
+    email
+  }
+}
+```
+
+## Project Structure
+
+```
+├── assets/               # Static assets
+├── components/           # Vue components
+├── docker-compose.yml    # Docker Compose configuration
+├── Dockerfile.nuxt       # Dockerfile for Nuxt application
+├── Dockerfile.graphql    # Dockerfile for GraphQL server
+├── graphql-server/       # GraphQL server code
+├── layouts/              # Nuxt layouts
+├── middleware/           # Nuxt middleware
+├── pages/                # Nuxt pages
+├── plugins/              # Nuxt plugins
+├── static/               # Static files
+└── store/                # Vuex store
+```
+
+## Docker Setup
+
+This project uses Docker Compose to run both the Nuxt.js frontend and the GraphQL server in separate containers:
+
+- **Nuxt.js Container**: Runs the Nuxt.js application on port 3000
+- **GraphQL Server Container**: Runs a simple GraphQL server on port 5000
+
+The containers are configured with volume mounts, so your code changes will be reflected in real-time during development.
+
+## Sources
 - [Apollo Docs](https://www.apollographql.com/docs)
 - [Building GraphQL APIs with Vue.js and Apollo Client](https://stackabuse.com/building-graphql-apis-with-vue-js-and-apollo-client/)
 

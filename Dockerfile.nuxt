@@ -1,0 +1,25 @@
+FROM node:16-alpine
+
+WORKDIR /app
+
+# Install build dependencies
+RUN apk add --no-cache python3 make g++
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application
+COPY . .
+
+# Expose the port the app runs on
+EXPOSE 3000
+
+# Set host to 0.0.0.0 to make the app accessible outside the container
+ENV HOST=0.0.0.0
+ENV PORT=3000
+
+# Command to run the application - for Nuxt 2
+CMD ["npm", "run", "dev"]

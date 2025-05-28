@@ -1,0 +1,38 @@
+services:
+  # Nuxt.js frontend application
+  nuxt-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.nuxt
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.nuxt
+    environment:
+      - NODE_ENV=development
+      - HOST=0.0.0.0
+    depends_on:
+      - graphql-server
+    networks:
+      - app-network
+
+  # GraphQL server
+  graphql-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.graphql
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./graphql-server:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

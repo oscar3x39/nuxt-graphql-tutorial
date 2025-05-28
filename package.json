@@ -11,13 +11,14 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/apollo": "^5.0.0-alpha.8",
+    "@nuxtjs/apollo": "^4.0.0-rc19",
     "@nuxtjs/axios": "^5.13.6",
-    "@nuxtjs/vuetify": "^1.9.1",
-    "cross-env": "^5.2.0",
+    "@nuxtjs/vuetify": "^1.12.3",
+    "cross-env": "^7.0.3",
     "express": "^4.21.2",
-    "graphql-tag": "^2.10.1",
-    "nuxt": "^3.16.0"
+    "graphql": "^15.8.0",
+    "graphql-tag": "^2.12.6",
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",

@@ -51,8 +51,10 @@ module.exports = {
   apollo: {
     clientConfigs: {
       default: {
-        // required
-        httpEndpoint: 'http://localhost:5000/graphql'
+        // Use localhost for browser clients and container name for server-side
+        httpEndpoint: process.browser 
+          ? 'http://localhost:5000/graphql'
+          : 'http://graphql-server:5000/graphql'
       }
     }
   },
